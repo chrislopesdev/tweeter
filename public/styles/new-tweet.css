@@ -46,3 +46,7 @@
   font-family: "Bungee", sans-serif;
   font-size: 18;
 }
+
+.invalid {
+  color: orangered;
+}

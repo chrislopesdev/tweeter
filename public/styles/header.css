@@ -1,7 +1,7 @@
 .header {
   /* background-color: coral; */
-  height: 560px;
-  padding: 160px 0 0 0;
+  height: 540px;
+  padding: 140px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,8 +12,13 @@
   color: #fff;
 }
 
+.header__img {
+  margin-bottom: 30px;
+}
+
 .header__heading {
   text-shadow: 0 3px 5px #545149;
+  font-size: 36px;
 }
 
 .text-bold {
