@@ -35,8 +35,13 @@ h2 {
   font-weight: 300;
 }
 
+::selection {
+  background-color: #002e72;
+  color: #fff;
+}
+
 .container {
   width: 90%;
   background-color: inherit;
-  margin: 0 auto;
+  margin: 50px auto;
 }

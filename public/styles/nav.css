@@ -1,7 +1,7 @@
 .nav {
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  background-color: #4057a1d5;
   color: #fff;
   padding: 0 1.5em;
   display: flex;
@@ -13,9 +13,9 @@
 }
 
 .nav__logo {
-   font-family: "bungee", sans-serif;
-   font-size: 48px;
- }
+  font-family: "bungee", sans-serif;
+  font-size: 48px;
+}
 
 .nav__link:visited,
 .nav__link:link {
@@ -39,4 +39,3 @@
   font-size: 18px;
   color: orangered;
 }
-
