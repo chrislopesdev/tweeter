@@ -63,13 +63,12 @@ const renderTweets = (tweets) => {
 };
 
 $(document).ready(() => {
-  const $tweet = renderTweets(tweetData);
-  $('#tweets-container').append($tweet);
+  // const $tweet = renderTweets(tweetData);
+  // $('#tweets-container').append($tweet);
 
   const form = $('.form');
   form.on('submit', function (e) {
     e.preventDefault();
-    // console.log($(this).serialize());
     $.ajax({
       method: 'POST',
       url: 'http://localhost:8080/tweets/',
@@ -79,4 +78,13 @@ $(document).ready(() => {
       },
     });
   });
+
+  const loadTweets = function () {
+    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+      .then(($tweet) => {
+        renderTweets($tweet);
+      });
+  };
+
+  loadTweets();
 });
