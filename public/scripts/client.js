@@ -55,20 +55,28 @@ const createTweetElement = function (data) {
 };
 
 const renderTweets = (tweets) => {
-  let $tweet;
   for (tweet of tweets) {
     // console.log(tweet);
-    $tweet = createTweetElement(tweet);
+    const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
   }
-  // return $tweet;
 };
 
 $(document).ready(() => {
-  // const $tweet = createTweetElement(tweetData);
   const $tweet = renderTweets(tweetData);
+  $('#tweets-container').append($tweet);
 
-  // Test / driver code (temporary)
-  // console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  const form = $('.form');
+  form.on('submit', function (e) {
+    e.preventDefault();
+    // console.log($(this).serialize());
+    $.ajax({
+      method: 'POST',
+      url: 'http://localhost:8080/tweets/',
+      data: $(this).serialize(),
+      success(data) {
+        console.log('success');
+      },
+    });
+  });
 });
