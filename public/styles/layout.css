@@ -44,4 +44,29 @@ h2 {
   width: 90%;
   background-color: inherit;
   margin: 50px auto;
+  position: relative;
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: orangered;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  z-index: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.scroll-button-show {
+  opacity: 1;
 }

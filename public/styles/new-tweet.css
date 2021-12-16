@@ -52,8 +52,13 @@
 }
 
 .post-error {
-  color: orangered;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
   font-weight: 600;
-  text-align: center;
-  margin: 20px 0;
+  display: none;
 }

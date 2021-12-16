@@ -13,4 +13,22 @@ $(document).ready(() => {
       counter.removeClass('invalid');
     }
   });
+
+  const rootElement = document.documentElement;
+  const scrollBtn = $('#scroll-button');
+
+  const handleScroll = () => {
+    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+    if ((rootElement.scrollTop / scrollTotal) > 0.2) {
+      scrollBtn.addClass('scroll-button-show');
+    } else {
+      scrollBtn.removeClass('scroll-button-show');
+    }
+  };
+
+  document.addEventListener('scroll', handleScroll);
+
+  scrollBtn.on('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
