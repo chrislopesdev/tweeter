@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const tweetData = [
   {
     user: {
@@ -61,10 +55,9 @@ const createTweetElement = function (data) {
 };
 
 const renderTweets = (tweets) => {
-  const tweetsChron = tweets.reverse();
-  for (tweet of tweetsChron) {
+  for (tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 };
 
@@ -104,6 +97,10 @@ $(document).ready(() => {
           loadTweets();
         },
       });
+      $('textarea').val('');
+      $('textarea').focus();
+      const counter = $('.form__counter');
+      counter.val(140);
     }
   });
 

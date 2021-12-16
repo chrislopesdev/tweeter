@@ -1,6 +1,4 @@
-// runs a callback when DOM is ready to be manipulated
 $(document).ready(() => {
-  // eslint-disable-next-line prefer-arrow-callback
   const counter = $('.form__counter');
   counter.append(140);
 
