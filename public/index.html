@@ -61,7 +61,8 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form action="/tweets/" method="POST" class="form">
+      <div class="post-error"></div>
+      <form action="/tweets/" method="POST" class="form" id="tweetform">
         <label class="form__label" for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text" class="form__input" placeholder="What are you humming about?"></textarea>
         <div>

@@ -66,17 +66,29 @@ $(document).ready(() => {
   // const $tweet = renderTweets(tweetData);
   // $('#tweets-container').append($tweet);
 
-  const form = $('.form');
+  const form = $('#tweetform');
+
   form.on('submit', function (e) {
     e.preventDefault();
-    $.ajax({
-      method: 'POST',
-      url: 'http://localhost:8080/tweets/',
-      data: $(this).serialize(),
-      success(data) {
-        console.log('success');
-      },
-    });
+    // const formInput = $(this).serialize();
+    // console.log(formInput);
+    const formInput = $('textarea.form__input').val();
+    // console.log(text);
+    if (!formInput) {
+      // console.log(this);
+      $('.post-error').append('<h4>Error: Tweets requre at least one character.</h4>');
+    } else if (formInput.length > 140) {
+      $('.post-error').append('<h4>Error: You gots too many characterz.</h4>');
+    } else {
+      $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8080/tweets/',
+        data: $(this).serialize(),
+        success(data) {
+          console.log('success');
+        },
+      });
+    }
   });
 
   const loadTweets = function () {
