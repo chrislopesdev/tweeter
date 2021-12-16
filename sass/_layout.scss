@@ -27,7 +27,7 @@ body {
  */
 
 body {
-  font-family: "source-sans-pro", sans-serif;
+  font-family: $font-secondary;
   font-weight: 300;
 }
 
@@ -36,7 +36,7 @@ h2 {
 }
 
 ::selection {
-  background-color: #002e72;
+  background-color: $color-primary-dark;
   color: #fff;
 }
 
@@ -51,7 +51,7 @@ h2 {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background: orangered;
+  background: $color-warn;
   color: #fff;
   width: 60px;
   height: 60px;
@@ -65,10 +65,11 @@ h2 {
   transition: all 0.2s;
   cursor: pointer;
   border: none;
+
+  &-show {
+    opacity: 1;
 }
 
-.scroll-button-show {
-  opacity: 1;
 }
 
 @media (min-width: 1024px) {
