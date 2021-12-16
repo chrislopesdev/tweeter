@@ -49,36 +49,40 @@
       <i class="nav_linkArrow fas fa-angle-double-down"></i>
     </button>
   </nav>
+  <div class="container-large">
 
-  <header id="header" class="header">
 
-    <img class="header__img" src="/images/profile-hex.png" />
+    <header id="header" class="header">
 
-    <h2 class="header__heading"><span class="text-bold">Christopher</span> Lopes</h2>
+      <img class="header__img" src="/images/profile-hex.png" />
 
-  </header>
+      <h2 class="header__heading"><span class="text-bold">Christopher</span> Lopes</h2>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+    </header>
 
-    <div class="post-error"></div>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
-    <section class="new-tweet">
-      <form action="/tweets/" method="POST" class="form" id="tweetform">
-        <label class="form__label" for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text" class="form__input" placeholder="What are you humming about?"></textarea>
-        <div>
-          <div class="form__flexBox">
-            <button class="form__button" type="submit">Tweet</button>
-            <output name="counter" class="form__counter" for="tweet-text"></output>
+      <div class="post-error"></div>
+
+      <section class="new-tweet">
+        <form action="/tweets/" method="POST" class="form" id="tweetform">
+          <label class="form__label" for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text" class="form__input"
+            placeholder="What are you humming about?"></textarea>
+          <div>
+            <div class="form__flexBox">
+              <button class="form__button" type="submit">Tweet</button>
+              <output name="counter" class="form__counter" for="tweet-text"></output>
+            </div>
           </div>
-        </div>
-      </form>
-    </section>
-    <div id="tweets-container">
-    </div>
-    <button id="scroll-button" class="scroll-button"><i class="fas fa-angle-double-up"></i></button>
-  </main>
+        </form>
+      </section>
+      <div id="tweets-container">
+      </div>
+      <button id="scroll-button" class="scroll-button"><i class="fas fa-angle-double-up"></i></button>
+    </main>
+  </div>
 </body>
 
 </html>

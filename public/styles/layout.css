@@ -70,3 +70,17 @@ h2 {
 .scroll-button-show {
   opacity: 1;
 }
+
+@media (min-width: 1024px) {
+  .container-large {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 0 auto;
+  }
+  .container {
+    width: auto;
+    margin: 200px 50px 0 450px;
+    flex-grow: 1;
+  }
+}
