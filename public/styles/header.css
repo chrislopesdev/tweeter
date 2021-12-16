@@ -24,3 +24,16 @@
 .text-bold {
   font-weight: 600;
 }
+
+@media (max-width: 600px) {
+  .header {
+    padding: 120px 0 30px 0;
+    height: 400px;
+  }
+  .header__img {
+    width: 30%;
+  }
+  .header__heading {
+    font-size: 24px;
+  }
+}

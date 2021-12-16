@@ -17,14 +17,16 @@
   font-size: 48px;
 }
 
-.nav__link:visited,
-.nav__link:link {
+.nav__link {
   color: #fff;
   text-decoration: none;
   font-weight: 300;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .nav__linkText {
@@ -38,4 +40,13 @@
 .nav_linkArrow {
   font-size: 18px;
   color: orangered;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    justify-content: center;
+  }
+  .nav__link {
+    display: none;
+  }
 }

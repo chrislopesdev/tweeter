@@ -55,3 +55,12 @@
 .tweet__footerIcons .fa-solid:hover {
   color: orangered;
 }
+
+@media (max-width: 600px) {
+  .tweet__header {
+    flex-direction: column;
+  }
+  .tweet__user {
+    margin-bottom: 10px;
+  }
+}
